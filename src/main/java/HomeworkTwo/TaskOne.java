@@ -1,23 +1,24 @@
+package HomeworkTwo;
+
 import java.util.Scanner;
 
 public class TaskOne {
     public static void main(String[] args) {
 
-        double number = 0;
-        boolean error = false;
-
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number: ");
+        boolean error = false;
+        double number = 0;
 
         try {
+            System.out.print("Enter a number: ");
             number = scanner.nextDouble();
         } catch (Exception e) {
             error = true;
         } finally {
             if (error) {
-                System.out.println("Next time enter a number.");
+                System.out.println("Enter a number next time.");
             } else {
-                System.out.println(Math.pow(number, 2));
+                System.out.println(number >= 0 ? "Number is positive." : "Number is negative");
             }
         }
     }
