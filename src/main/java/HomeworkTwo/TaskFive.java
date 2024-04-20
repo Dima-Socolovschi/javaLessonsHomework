@@ -11,3 +11,4 @@ public class TaskFive {
         System.out.println(text instanceof java.lang.String);
     }
 }
+
